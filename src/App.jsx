@@ -30,6 +30,7 @@ const App = () => {
 
       google.accounts.id.renderButton(
         document.getElementById("signInDiv"),
+        { theme: "outline",}
         
       );
     }, [])
