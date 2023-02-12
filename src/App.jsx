@@ -37,12 +37,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <div id="loginTitle">
       <ChakraProvider resetCSS>
+      <div id="loginTitle">
+    
       <Heading textAlign="center" mb="20px" p="50px">
         TSI AI Suite Tools
        </Heading>
-      </ChakraProvider>
+
 
       </div>
       <Box
@@ -56,6 +57,7 @@ const App = () => {
                 p="20px"
               >
       <div id="signInDiv"></div>
+      </ChakraProvider>
       </Box>
        { Object.keys(user).length != 0 &&
               <ChakraProvider resetCSS>
