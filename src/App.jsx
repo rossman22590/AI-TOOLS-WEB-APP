@@ -27,7 +27,7 @@ const App = () => {
   }
 
     useEffect(() => {
-      /*global google */
+      /* global google */
       google.accounts.id.initialize({
         client_id: "961914769436-42c9hml7njnf7ik7r9sj5sd2kprtk5e3.apps.googleusercontent.com",
         callback: handleCallbackResponse
