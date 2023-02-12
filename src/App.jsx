@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { ChakraProvider, Link, Box, Heading, Text } from "@chakra-ui/react";
+import logo from './logo.png';
+
 
 const App = () => {
   const [ user, setUser] = useState({});
@@ -30,20 +32,21 @@ const App = () => {
 
       google.accounts.id.renderButton(
         document.getElementById("signInDiv"),
-        { theme: "outline",}
-        
+        { theme: "outline", size: "large",}
       );
     }, [])
 
   return (
     <div className="App">
-      <ChakraProvider resetCSS>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25vh' }}>
+  <img src={logo} alt="Logo" />
+</div>
       <div id="loginTitle">
-    
+      <ChakraProvider resetCSS>
       <Heading textAlign="center" mb="20px" p="50px">
-        TSI AI Suite Tools
+        AI Suite Tools
        </Heading>
-
+      </ChakraProvider>
 
       </div>
       <Box
@@ -51,19 +54,16 @@ const App = () => {
                 border="regular"
                 textAlign="center"
                 alignItems="center"
-                ml="44%"
+                ml="43%"
                 mr="43%"
                 mb="20px"
                 p="20px"
               >
       <div id="signInDiv"></div>
       </Box>
-   </ChakraProvider>
        { Object.keys(user).length != 0 &&
               <ChakraProvider resetCSS>
-    <Heading textAlign="center" mb="20px" p="50px">
-        TSI AI Suite Tools
-       </Heading>
+   
               <Box
                 display="block"
                 backgroundColor="linkedin.500"
