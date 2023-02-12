@@ -49,7 +49,7 @@ const App = () => {
                 border="regular"
                 textAlign="center"
                 alignItems="center"
-                ml="43%"
+                ml="45%"
                 mr="43%"
                 mb="20px"
                 p="20px"
@@ -364,7 +364,7 @@ const App = () => {
               </Box>
               <Box
                 display="block"
-                backgroundColor="#9d3df7"
+                backgroundColor="black"
                 color="white"
                 borderRadius={20}
                 border="regular"
