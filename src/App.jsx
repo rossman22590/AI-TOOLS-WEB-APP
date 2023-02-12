@@ -57,8 +57,8 @@ const App = () => {
                 p="20px"
               >
       <div id="signInDiv"></div>
-      </ChakraProvider>
       </Box>
+   </ChakraProvider>
        { Object.keys(user).length != 0 &&
               <ChakraProvider resetCSS>
     <Heading textAlign="center" mb="20px" p="50px">
