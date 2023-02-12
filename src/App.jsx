@@ -35,7 +35,7 @@ const App = () => {
 
       google.accounts.id.renderButton(
         document.getElementById("signInDiv"),
-        { theme: "outline", size: "large",}
+        { theme: "outline", size: "large", }
       );
     }, [])
 
@@ -57,10 +57,6 @@ const App = () => {
                 border="regular"
                 textAlign="center"
                 alignItems="center"
-                ml="44%"
-                mr="43%"
-                mb="20px"
-                p="20px"
               >
       <div id="signInDiv"></div>
       <div id="backgroundLogin"style={{ height: `55vh` }}></div>
