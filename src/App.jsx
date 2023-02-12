@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { ChakraProvider, Link, Box, Heading, Text } from "@chakra-ui/react";
 import logo from './logo.png';
+import backgroundSVG from './background.svg';
 
 
 const App = () => {
@@ -14,13 +15,15 @@ const App = () => {
     console.log(userObject);
     setUser(userObject);
     document.getElementById("signInDiv").hidden = true;
-    document.getElementById("loginTitle").hidden = true
+    document.getElementById("loginTitle").hidden = true;
+    document.getElementById("backgroundLogin").hidden = true
   }
   
   function handleSignOut(event) {
     setUser({});
     document.getElementById("signInDiv").hidden = false;
-    document.getElementById("loginTitle").hidden = false
+    document.getElementById("loginTitle").hidden = false;
+    document.getElementById("backgroundLogin").hidden = false
   }
 
     useEffect(() => {
@@ -37,8 +40,8 @@ const App = () => {
     }, [])
 
   return (
-    <div className="App">
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25vh' }}>
+    <div className="App" style={{ backgroundImage: `url(${backgroundSVG})`, backgroundRepeat: 'repeat' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '20%' }}>
   <img src={logo} alt="Logo" />
 </div>
       <div id="loginTitle">
@@ -60,6 +63,7 @@ const App = () => {
                 p="20px"
               >
       <div id="signInDiv"></div>
+      <div id="backgroundLogin"style={{ height: `55vh` }}></div>
       </Box>
        { Object.keys(user).length != 0 &&
               <ChakraProvider resetCSS>
