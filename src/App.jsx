@@ -61,7 +61,6 @@ const App = () => {
       <div id="signInDiv"></div>
       </div>
       <div id="backgroundLogin"style={{ height: `55vh` }}></div>
-      </Box>
        { Object.keys(user).length != 0 &&
               <ChakraProvider resetCSS>
    
