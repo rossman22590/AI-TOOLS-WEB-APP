@@ -12,7 +12,6 @@ const App = () => {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '100vh'
 };
   function handleCallbackResponse(response) {
     console.log("Encoded JWT ID Token: " + response.credential);
