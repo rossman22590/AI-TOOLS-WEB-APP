@@ -57,7 +57,7 @@ const App = () => {
                 border="regular"
                 textAlign="center"
                 alignItems="center"
-                ml="43%"
+                ml="45%"
                 mr="43%"
                 mb="20px"
                 p="20px"
