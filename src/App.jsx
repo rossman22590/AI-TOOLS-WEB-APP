@@ -57,6 +57,9 @@ const App = () => {
                 border="regular"
                 textAlign="center"
                 alignItems="center"
+                display: 'flex'
+                justifyContent: 'center'
+
               >
       <div id="signInDiv"></div>
       <div id="backgroundLogin"style={{ height: `55vh` }}></div>
