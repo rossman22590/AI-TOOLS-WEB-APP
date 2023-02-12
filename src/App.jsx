@@ -8,7 +8,12 @@ import backgroundSVG from './background.svg';
 
 const App = () => {
   const [ user, setUser] = useState({});
-
+  const center = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh'
+};
   function handleCallbackResponse(response) {
     console.log("Encoded JWT ID Token: " + response.credential);
     var userObject = jwt_decode(response.credential);
@@ -52,16 +57,9 @@ const App = () => {
       </ChakraProvider>
 
       </div>
-      <Box
-                borderRadius={20}
-                border="regular"
-                textAlign="center"
-                alignItems="center"
-                display: 'flex'
-                justifyContent: 'center'
-
-              >
+      <div style={center}>
       <div id="signInDiv"></div>
+      </div>
       <div id="backgroundLogin"style={{ height: `55vh` }}></div>
       </Box>
        { Object.keys(user).length != 0 &&
